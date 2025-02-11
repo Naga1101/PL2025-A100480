@@ -14,8 +14,6 @@ def counter(text):
             elif(text[i+1].lower() == 'f' and text[i+2].lower() == 'f'):
                 add = False
                 i+=2
-        if(text[i] == '='):
-            print(counter)
         if(text[i] in digits and add):
             numberToAdd = int(text[i])
             i+=1
@@ -24,6 +22,9 @@ def counter(text):
                 i+=1
 
             counter += numberToAdd
+        if(text[i] == '='):
+            print(counter)
+            i+=1
         else:
             i+=1
 
