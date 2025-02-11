@@ -10,10 +10,10 @@ def counter(text):
         if(text[i].lower() == 'o'):
             if(text[i+1].lower() == 'n'):
                 add = True
-                i+=1
+                i+=2
             elif(text[i+1].lower() == 'f' and text[i+2].lower() == 'f'):
                 add = False
-                i+=2
+                i+=3
         if(text[i] in digits and add):
             numberToAdd = int(text[i])
             i+=1
