@@ -1,0 +1,52 @@
+{
+    "stock": [
+        {
+            "cod": "A10",
+            "nome": "Água 500ml",
+            "quant": 10,
+            "preco": 0.7
+        },
+        {
+            "cod": "A11",
+            "nome": "Refrigerante 330ml",
+            "quant": 10,
+            "preco": 1.5
+        },
+        {
+            "cod": "A12",
+            "nome": "Sumo de Laranja 250ml",
+            "quant": 10,
+            "preco": 1.2
+        },
+        {
+            "cod": "A13",
+            "nome": "Amendoins 150g",
+            "quant": 10,
+            "preco": 1.4
+        },
+        {
+            "cod": "B20",
+            "nome": "Chá Frio 500ml",
+            "quant": 10,
+            "preco": 1.0
+        },
+        {
+            "cod": "B21",
+            "nome": "Gomas",
+            "quant": 10,
+            "preco": 1.8
+        },
+        {
+            "cod": "B22",
+            "nome": "Chocolate 50g",
+            "quant": 10,
+            "preco": 2.0
+        },
+        {
+            "cod": "B23",
+            "nome": "Bolachas 100g",
+            "quant": 10,
+            "preco": 1.3
+        }
+    ]
+}
