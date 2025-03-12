@@ -19,7 +19,8 @@ stock = [
         "quant": 8, 
         "preco": 0.7
     },
-]```
+]
+```
 E os comandos implementados foram os seguintes:
 - **LISTAR:** Demonstra uma lista com os itens que existem de momento no stock da máquina;
 - **DEPOSITAR:** Comando utilizado para inserir dinheiro na máquina, sendo que as opções e depósito são demonstradas no ecrã;
