@@ -1,4 +1,9 @@
 # PL2025-Projeto
+## Membros
+
+Nuno Aguiar: A100480
+João Valente: A100540
+Oleksii Tantsura: A102131
 
 ## Introdução
 
