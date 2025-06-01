@@ -1,0 +1,32 @@
+JUMP main
+
+bintoint:
+
+main:
+	START
+
+	// writeln
+	PUSHS "Introduza uma string binária:"
+	WRITES
+	WRITELN
+
+	// readln
+	READ
+	STOREL 0
+	WRITELN
+
+	// assign ('Function_call', {'name': 'BinToInt', 'args': ['bin']}) to valor
+	// Call da bintoint com os parametros ['bin']
+	PUSHL 0
+	PUSHA bintoint
+	CALL
+	STOREL 1
+
+	// writeln
+	PUSHS "O valor inteiro correspondente é: "
+	WRITES
+	PUSHL 1
+	WRITEI
+	WRITELN
+
+	STOP

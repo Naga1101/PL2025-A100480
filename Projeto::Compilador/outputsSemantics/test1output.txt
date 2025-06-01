@@ -1,0 +1,12 @@
+JUMP main
+
+
+main:
+	START
+
+	// writeln
+	PUSHS "Ola, Mundo!"
+	WRITES
+	WRITELN
+
+	STOP

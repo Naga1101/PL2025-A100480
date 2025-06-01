@@ -1,0 +1,61 @@
+JUMP main
+
+positivo:
+	// binop >
+	PUSHL -1
+	PUSHI 0
+	SUP
+
+	RETURN
+
+
+main:
+	START
+
+	// assign ('Function_call', {'name': 'Positivo', 'args': [5]}) to a
+	// Call da positivo com os parametros [5]
+	PUSHI 5
+	PUSHA positivo
+	CALL
+	STOREL 0
+
+	// If case: {'case': 'a', 'do': ('writeln', ['É positivo']), 'else': ('writeln', ['É negativo'])}
+	PUSHL 0
+	JZ labelElse1
+	// writeln
+	PUSHS "É positivo"
+	WRITES
+	WRITELN
+
+	JUMP labelEndIF1
+	labelElse1:
+	// writeln
+	PUSHS "É negativo"
+	WRITES
+	WRITELN
+
+	labelEndIF1:
+	// assign ('Function_call', {'name': 'Positivo', 'args': [-3]}) to b
+	// Call da positivo com os parametros [-3]
+	PUSHI -3
+	PUSHA positivo
+	CALL
+	STOREL 1
+
+	// If case: {'case': 'b', 'do': ('writeln', ['É positivo']), 'else': ('writeln', ['É negativo'])}
+	PUSHL 1
+	JZ labelElse2
+	// writeln
+	PUSHS "É positivo"
+	WRITES
+	WRITELN
+
+	JUMP labelEndIF2
+	labelElse2:
+	// writeln
+	PUSHS "É negativo"
+	WRITES
+	WRITELN
+
+	labelEndIF2:
+	STOP

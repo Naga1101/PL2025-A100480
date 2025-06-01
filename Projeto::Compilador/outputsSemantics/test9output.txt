@@ -1,0 +1,27 @@
+JUMP main
+
+
+main:
+	START
+
+	// assign A to ch
+	PUSHS "A"
+	STOREL 0
+
+	// assign ('ord', 'ch') to code
+	// ord
+	PUSHI 65
+	STOREL 1
+
+	// writeln
+	PUSHS "The ASCII code of "
+	WRITES
+	PUSHL 0
+	WRITES
+	PUSHS " is "
+	WRITES
+	PUSHL 1
+	WRITEI
+	WRITELN
+
+	STOP

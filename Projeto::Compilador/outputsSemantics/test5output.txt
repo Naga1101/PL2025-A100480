@@ -1,0 +1,23 @@
+JUMP main
+
+
+main:
+	START
+
+	// assign 0 to soma
+	PUSHI 0
+	STOREL 0
+
+	// writeln
+	PUSHS "Introduza 5 números inteiros:"
+	WRITES
+	WRITELN
+
+	// writeln
+	PUSHS "A soma dos números é: "
+	WRITES
+	PUSHL 0
+	WRITEI
+	WRITELN
+
+	STOP

@@ -1,0 +1,23 @@
+[
+  "program",
+  {
+    "program_name": "HelloWorld",
+    "program_body": {
+      "program_code": [
+        "compound",
+        [
+          [
+            "comment",
+            "{ ISTO É UM COMENTARIO }"
+          ],
+          [
+            "writeln",
+            [
+              "Ola, Mundo!"
+            ]
+          ]
+        ]
+      ]
+    }
+  }
+]

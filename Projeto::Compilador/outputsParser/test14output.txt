@@ -1,0 +1,160 @@
+[
+  "program",
+  {
+    "program_name": "TesteFuncao",
+    "program_body": {
+      "functions": [
+        [
+          "function",
+          {
+            "name": "Dobro",
+            "parameters": [
+              [
+                [
+                  "vars",
+                  [
+                    "x"
+                  ]
+                ],
+                [
+                  "type",
+                  "integer"
+                ]
+              ]
+            ],
+            "return_type": "integer",
+            "body": [
+              "compound",
+              [
+                [
+                  "assign",
+                  "Dobro",
+                  [
+                    "binop",
+                    {
+                      "type": "*",
+                      "left": "x",
+                      "right": 2
+                    }
+                  ]
+                ]
+              ]
+            ]
+          }
+        ]
+      ],
+      "var_declaration": [
+        "var_decl_lines",
+        [
+          [
+            [
+              "vars",
+              [
+                "valor",
+                "counter"
+              ]
+            ],
+            [
+              "type",
+              "Integer"
+            ]
+          ]
+        ]
+      ],
+      "program_code": [
+        "compound",
+        [
+          [
+            "write",
+            [
+              "Introduza um número menor que 10: "
+            ]
+          ],
+          [
+            "readln",
+            "valor"
+          ],
+          [
+            "assign",
+            "counter",
+            1
+          ],
+          [
+            "while",
+            {
+              "condition": [
+                "binop",
+                {
+                  "type": "<",
+                  "left": "valor",
+                  "right": 10
+                }
+              ],
+              "body": [
+                "compound",
+                [
+                  [
+                    "assign",
+                    "valor",
+                    [
+                      "Function_call",
+                      {
+                        "name": "Dobro",
+                        "args": [
+                          "valor"
+                        ]
+                      }
+                    ]
+                  ],
+                  [
+                    "writeln",
+                    [
+                      "O ciclo ",
+                      "counter",
+                      " têm o valor: ",
+                      "valor"
+                    ]
+                  ],
+                  [
+                    "if",
+                    {
+                      "case": [
+                        "binop",
+                        {
+                          "type": "<",
+                          "left": "valor",
+                          "right": 10
+                        }
+                      ],
+                      "do": [
+                        "assign",
+                        "counter",
+                        [
+                          "binop",
+                          {
+                            "type": "+",
+                            "left": "counter",
+                            "right": 1
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                ]
+              ]
+            }
+          ],
+          [
+            "writeln",
+            [
+              "Foram preciso ",
+              "counter",
+              " ciclos e o valor final foi ",
+              "valor"
+            ]
+          ]
+        ]
+      ]
+    }
+  }
+]

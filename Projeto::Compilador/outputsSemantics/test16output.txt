@@ -1,0 +1,70 @@
+JUMP main
+
+
+main:
+	START
+
+	// assign 0 to soma
+	PUSHI 0
+	STOREL 0
+
+	// for loop: {'var': 'i', 'start': 1, 'end': 3, 'direction': 'to', 'body': ('assign', 'soma', ('binop', {'type': '+', 'left': 'soma', 'right': 'i'}))}
+	// assign 1 to i
+	PUSHI 1
+	STOREL 1
+
+	labelForStart5:
+	PUSHL 1
+	PUSHI 3
+	SUP
+	JZ labelForBody5
+	JUMP labelForEnd5
+	labelForBody5:
+	// assign ('binop', {'type': '+', 'left': 'soma', 'right': 'i'}) to soma
+	// binop +
+	PUSHL 0
+	PUSHL 1
+	ADD
+
+	STOREL 0
+
+	PUSHL 1
+	PUSHI 1
+	ADD
+	STOREL 1
+	JUMP labelForStart5
+	labelForEnd5:
+
+	// for loop: {'var': 'i', 'start': 3, 'end': 1, 'direction': 'downto', 'body': ('assign', 'soma', ('binop', {'type': '+', 'left': 'soma', 'right': 'i'}))}
+	// assign 3 to i
+	PUSHI 3
+	STOREL 1
+
+	labelForStart6:
+	PUSHL 1
+	PUSHI 1
+	INF
+	JZ labelForBody6
+	JUMP labelForEnd6
+	labelForBody6:
+	// assign ('binop', {'type': '+', 'left': 'soma', 'right': 'i'}) to soma
+	// binop +
+	PUSHL 0
+	PUSHL 1
+	ADD
+
+	STOREL 0
+
+	PUSHL 1
+	PUSHI 1
+	SUB
+	STOREL 1
+	JUMP labelForStart6
+	labelForEnd6:
+
+	// writeln
+	PUSHL 0
+	WRITEI
+	WRITELN
+
+	STOP

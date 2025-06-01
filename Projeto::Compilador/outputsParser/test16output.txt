@@ -1,0 +1,96 @@
+[
+  "program",
+  {
+    "program_name": "TestaLoops",
+    "program_body": {
+      "var_declaration": [
+        "var_decl_lines",
+        [
+          [
+            [
+              "vars",
+              [
+                "i",
+                "soma"
+              ]
+            ],
+            [
+              "type",
+              "integer"
+            ]
+          ]
+        ]
+      ],
+      "program_code": [
+        "compound",
+        [
+          [
+            "assign",
+            "soma",
+            0
+          ],
+          [
+            "comment",
+            "{ loop crescente }"
+          ],
+          [
+            "for",
+            {
+              "var": "i",
+              "start": 1,
+              "end": 3,
+              "direction": "to",
+              "body": [
+                "assign",
+                "soma",
+                [
+                  "binop",
+                  {
+                    "type": "+",
+                    "left": "soma",
+                    "right": "i"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            "comment",
+            "{ loop decrescente }"
+          ],
+          [
+            "for",
+            {
+              "var": "i",
+              "start": 3,
+              "end": 1,
+              "direction": "downto",
+              "body": [
+                "assign",
+                "soma",
+                [
+                  "binop",
+                  {
+                    "type": "+",
+                    "left": "soma",
+                    "right": "i"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            "comment",
+            "{ deve imprimir 12 }"
+          ],
+          [
+            "writeln",
+            [
+              "soma"
+            ]
+          ]
+        ]
+      ]
+    }
+  }
+]
